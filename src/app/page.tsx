@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import { BackgroundStory } from '@/kit/background.story'
 import { FieldLabelStory } from '@/kit/field/story'
 import { FlexChildStory } from '@/kit/flex.story'
+import { InverseOverlayStory } from '@/kit/inverse-overlay.story'
 import { SizePointerStory } from '@/kit/size.story'
 import { Flex } from '@radix-ui/themes'
 import { AppTitle } from './title'
@@ -18,6 +19,7 @@ export function AppPage(): ReactElement {
       <FieldLabelStory />
       <SizePointerStory />
       <BackgroundStory />
+      <InverseOverlayStory />
     </Flex>
   )
 }
