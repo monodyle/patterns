@@ -1,6 +1,7 @@
 import { FieldBlock } from '@/kit/field/block'
+import { HoverCardContent } from '@/kit/overlay/hover-card'
 import { SelectContent } from '@/kit/overlay/select'
-import { Select, Text } from '@radix-ui/themes'
+import { Avatar, Box, Flex, Heading, HoverCard, Link, Select, Text } from '@radix-ui/themes'
 
 const typefaces = [{
   value: 'ia',
@@ -45,5 +46,52 @@ export function ExampleOverlaySelect() {
         </SelectContent>
       </Select.Root>
     </FieldBlock>
+  )
+}
+
+const persons = [{
+  name: 'Thien Do',
+  id: 'thien-do',
+  avatar: 'https://github.com/thien-do.png',
+}, {
+  name: 'Monody Le',
+  id: 'monodyle',
+  avatar: 'https://github.com/monodyle.png',
+}]
+
+export function ExampleOverlayHoverCard() {
+  return (
+    <Flex gap="2">
+      {persons.map(({ name, id, avatar }) => (
+        <HoverCard.Root key={id}>
+          <HoverCard.Trigger>
+            <Avatar
+              size="3"
+              fallback={name.charAt(0)}
+              radius="full"
+              src={avatar}
+            />
+          </HoverCard.Trigger>
+          <HoverCardContent maxWidth="300px">
+            <Flex gap="4">
+              <Avatar
+                size="3"
+                fallback={name.charAt(0)}
+                radius="full"
+                src={avatar}
+              />
+              <Box>
+                <Heading size="3" as="h3">
+                  {name}
+                </Heading>
+                <Text as="div" size="2" color="gray">
+                  {id}
+                </Text>
+              </Box>
+            </Flex>
+          </HoverCardContent>
+        </HoverCard.Root>
+      ))}
+    </Flex>
   )
 }
