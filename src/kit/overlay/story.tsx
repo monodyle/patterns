@@ -15,15 +15,15 @@ Switch to Light appearance to see the differences better.
 
   const desc = `
 **Use a dark overlay to create a distinct contrast with 
-the light background**. Overlays are commonly used to draw 
-attention to specific elements or to provide a focused 
-experience for the user. This pattern isolate the contrast 
-between the main theme and the overlay to achieve this effect.
+the light background**. Overlays like select, popover, 
+and tooltip are commonly used to draw attention to 
+specific elements or to provide a focused experience 
+for the user. Use \`<SelectContent />\` and 
+\`<PopoverContent />\` to isolate the contrast between 
+the main theme and the overlay.
 
-To maintain a calm and consistent experience, avoid using 
-a light overlay that would invert the theme. Instead, 
-consider using a darker overlay or no overlay at all, 
-depending on the design requirements.
+In other hands, to maintain a calm and consistent 
+experience, don't inverse the interfaces.
 `
 
   return (
