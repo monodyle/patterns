@@ -2,7 +2,7 @@ import { ExampleBox } from '@/example/box'
 import { ExampleOverlaySelect } from '@/example/overlay'
 import { Story } from '@/utils/story'
 
-export function InverseOverlayStory() {
+export function OverlayStory() {
   const canvas = (
     <ExampleBox maxWidth="240px">
       <ExampleOverlaySelect />
@@ -28,7 +28,7 @@ depending on the design requirements.
 
   return (
     <Story
-      title="Inverse Overlay"
+      title="Overlay"
       canvas={canvas}
       hint={hint}
       desc={desc}
